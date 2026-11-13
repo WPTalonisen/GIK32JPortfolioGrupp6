@@ -3,33 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Om mig – [Personens namn]</title>
+  <title>Maxnoliam Pettholblad Portfolio</title>
   <meta name="description" content="TODO: en mening om vad sidan Om mig innehåller.">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/script.js" defer></script>
 </head>
 <body>
-  <!-- TODO: BEM-klasser enligt kontrakt.md på header, nav, main, footer och deras delar -->
-  <header>
-    <nav aria-label="Huvudmeny">
-      <ul>
-        <li><a href="index.html">Om mig</a></li>
-        <li><a href="kompetenser.html">Kompetenser</a></li>
-        <li><a href="projekt.html">Projekt</a></li>
-        <li><a href="utbildning.html">Utbildning och erfarenhet</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <!-- TODO: länk till er egna sida -->
+
+<!--
+En massa random skit kommer dyka upp här för jag har tråkigt, man måste ju underhålla sig på nåt sätt.
+Allt random uppfyller samma krav som det som behövs för slutprodukten, bara att byta ut allt till lite mer seriösare innehåll.
+Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
+-->
+
+
+
+
+<!--- Länk som hoppar över info och går rakt till det en anställare behöver veta -->
+<a class="skip-link" href="#main-content">Hoppa till huvudinnehållet</a>
+
+  <header class="site-header">
+    <a class="site-header_logo" href="index.html">Maxnolian Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
+
+    <nav class="main-menu" aria-label="Huvudmeny">
+      <button class="main-menu__toggle" type="button" data-js-action="toggle-menu" aria-expanded="false" aria-controls="main-menu-list">Meny</button>
+      <ul class="main-menu__list" id="main-menu-list" data-js-target="menu">
+        <li class="main-menu__item"><a class="main-menu__link" href="kompetenser.html">Kompetenser</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="projekt.html">Projekt</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="utbildning.html">Utbildning och Erfarenhet</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="certifieringar.html">Certifieringar</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="kontakt.html">Kontakt</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <h1>Om mig</h1>
-    <!-- TODO: sidans innehåll -->
+  <main class="page" id="main-content">
+    <h1 class="page__title">Hej! Jag heter Maxnoliam Pettholblad!</h1>
+    <p class="page__intro">Jag studerar IT-Säkerhet och Mjukvarutestning på Högskolan Dalarna Borlänge. Jag strävar efter hållbar, säker och robust kod redan vid första raden.</p>
+
+    <section class="topic" aria-labelledby="vem-rubrik">
+      <h2 class="topic__title" id="vem-rubrik">Vem är jag?</h2>
+      <figure class="profile">
+        <img class="profile__photo" src="/images/jagmuskel.jpeg" alt="Porträtt av Maxnoliam Pettholblad som spänner sig och visar sina muskler. Bilden är svartvit och man ser nästan hela kroppen. Musklerna är sexiga och veniga. Han är oljad och glänser sexigt." width="600" height="1066">
+        <figcaption class="profile__credit">Maxnoliam Pettholblad hemma en vardag. Ludborlun, 2026.</figcaption>
+      </figure>
+      <p class="topic__text">Jag är 13 år gammal och bor i Ludborlun. Innan jag började studera jobbade jag som professionell soffpotatis inom soffbranchen. Där var jag en ledande spelare och både stresstestade soffans integritet med min vikt och chipssmulor samt som jag på egen hand konsumerade mer än 10 tusen kalorier i timmen.</p>
+      <p class="topic__text">Idag läser jag andra året på utbildningen IT-säkerhet och Mjukvarutestning. Jag trivs bäst i backend där jag kan fokusera på säkerheten: att bygga API:er, granska kod och hitta svagheter innan någon annan luring kan hitta dom gör det alltid roligt och intressant. Liksom, tänk om någon hittar alla fel innan mig? Fan vad stressigt.</p>
+      <p class="topic__text">På fritiden brukar jag lägga in all källkod jag snor från företag och liknande och lägga in i Claude för att hitta svagheter så jag kan hacka dom under ett alias. Det är så jag ska bli rik.</p>
+    </section>
+
+    <section class="topic" aria-labelledby="mal-rubrik">
+      <h2 class="topic__title" id="mal-rubrik">Mina Karriärmål</h2>
+      <p class="topic__text">De kommande åren vill jag växa till en IT-säkerhetsspecialist som team kan lita på oavsätt ärende.</p>
+      <ul class="topic:__point" aria-labelledby="mal-rubrik">
+        <li class="topic__point">Kortsiktigt: Hacka Apple och Amazon och blackmaila dom så jag får cash.</li>
+        <li class="topic__point">Inom två år: Arbeta som professionell hacker.</li>
+        <li class="topic__point">Inom fem år: Bli superhacker och få en Netflix dokumentär skriven om mig, spelad av Ryan Gosling.</li>
+      </ul>
+    </section>
+
+    <aside class="sidebar" aria-labelledby="fakta-rubrik">
+      <h2 class="sidebar_title" id="fakta-rubrik">Snabbfakta</h2>
+      <dl class="fact-list">
+        <dt class="fact-list__term">Ort</dt>
+        <dd class="fact-list__value">Ludborlun</dd>
+        <dt class="fact-list__term">Vem jag redan hackat</dt>
+        <dd class="fact-list__value">Dig</dd>
+        <dt class="fact-list__term">Vem jag ska hacka</dt>
+        <dd class="fact-list__value">Alla</dd>
+      </dl>
+      <p class="sidebar__text"><a class="sidebar__link" href="kontakt.html">Kontakta Maxnoliam om för att bli hackad.</a></p>
+    </aside>
   </main>
 
-  <footer>
-    <!-- TODO: sidfot -->
+<!-- Ska vara länkar här om jag orkar, annars får det leda till nåt -->
+  <footer class="site-footer">
+    <p class="site-footer__text">&copy; Maxnoliam Pettholblad äger alla rättigheter i världen.</p>
+    <ul class="site-footer__links">
+      <li class="site-footer__item"><a class="site-footer__link" href="/images/MaxSV.jpg" alt="Maxnoliam Pettholblad på en torsdag" width="400" height="400">Maxnoliam Pettholblad på en torsdag.</a></li>
+      <li class="site-footer__item"><a class="site-footer__link" href="/images/noel.png" alt="Maxnoliam Pettholblad på en tisdag." width="400" height="400">Maxnoliam Pettholblad på en tisdag.</a></li>
+    </ul>
   </footer>
 </body>
 </html>
