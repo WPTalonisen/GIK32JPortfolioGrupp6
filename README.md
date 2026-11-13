@@ -12,3 +12,5 @@ Projekt: bokningssida för en padelhall, väderapp, den här portfolion.
 Utbildning: systemvetenskap vid Högskolan Dalarna, Naturvetenskapsprogrammet.
 Jobb: extrajobb i kassan på ICA, sommarjobb som IT-support på kommunen.
 Egen sida: “Just nu lär jag mig”, t.ex. JavaScript och WCAG.
+Mail: alexnordin@example.com
+Tel:123456789
