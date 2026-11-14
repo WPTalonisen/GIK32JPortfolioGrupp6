@@ -3,33 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kontakt – [Personens namn]</title>
-  <meta name="description" content="TODO: en mening om vad sidan Kontakt innehåller.">
+  <title>Maxnoliam Pettholblad Portfolio</title>
+  <meta name="description" content="Grundläggande information om vem Maxnoliam Pettholblad är och aspirerar att bli.">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/script.js" defer></script>
 </head>
 <body>
-  <!-- TODO: BEM-klasser enligt kontrakt.md på header, nav, main, footer och deras delar -->
-  <header>
-    <nav aria-label="Huvudmeny">
-      <ul>
-        <li><a href="index.html">Om mig</a></li>
-        <li><a href="kompetenser.html">Kompetenser</a></li>
-        <li><a href="projekt.html">Projekt</a></li>
-        <li><a href="utbildning.html">Utbildning och erfarenhet</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <!-- TODO: länk till er egna sida -->
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <h1>Kontakt</h1>
-    <!-- TODO: sidans innehåll -->
-  </main>
+<!--
+En massa random skit kommer dyka upp här för jag har tråkigt, man måste ju underhålla sig på nåt sätt.
+Allt random uppfyller samma krav som det som behövs för slutprodukten, bara att byta ut allt till lite mer seriösare innehåll.
+Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
+-->
 
-  <footer>
-    <!-- TODO: sidfot -->
-  </footer>
+
+
+
+<!--- Länk som hoppar över info och går rakt till det en anställare behöver veta -->
+<a class="skip-link" href="#main-content">Hoppa till huvudinnehållet</a>
+
+<header class="site-header">
+  <!-- Gör namnet högst upp till en länk -->
+  <a class="site-header_logo" href="index.html">Maxnolian Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
+
+  <!-- Menyn högst upp som visar kategorier, se till att alla filer finns och att allt ser rätt ut -->
+  <!-- Ska vara exakt samma på alla sidor -->
+  <nav class="main-menu" aria-label="Huvudmeny">
+    <button class="main-menu__toggle" type="button" data-js-action="toggle-menu" aria-expanded="false" aria-controls="main-menu-list">Meny</button>
+    <ul class="main-menu__list" id="main-menu-list" data-js-target="menu">
+      <li class="main-menu__item"><a class="main-menu__link" href="kompetenser.html">Kompetenser</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="projekt.html">Projekt</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="utbildning.html">Utbildning och Erfarenhet</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="certifieringar.html">Certifieringar</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Huvudtexten -->
+<main class="page" id="main-content">
+  <h1 class="page__title">Kontakt</h1>
+  <p class="page__intro">Söker du en levande legend? Jag svarar om jag känner för det.</p>
+
+  <section class="topic" aria-labelledby="uppgifter-rubrik">
+    <h2 class="topic__title" id="uppgifter-rubrik">Kontaktuppgifter</h2>
+    <ul class="contact-list">
+      <li class="contact-list__item">
+        <a class="contact-list__link" href="mailto:example@example.com">Mejla mig om du vågar. Jag vet redan din mail.</a>
+        <!-- JS ska kopiera länken och sen ska "E-postadressen är kopierad" skrivas -->
+        <button class="contact-list__copy" type="button" data-js-action="copy-email" data-email="example@example.com">Kopiera e-postadressen</button>
+        <p class="contact-list__status" data-js-target="copy-status" aria-live="polite"></p>
+      </li>
+      <li class="contact-list__item">
+        <a class="contact-list__link" href="www.youtube.com">Maxnoliam Pettholblad på LinkedIn</a>
+      </li>
+      <li class="contact-list__item">
+        <a class="contact-list__link" href="www.youtube.com">Maxnoliam Pettholblad på GitHub</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Meddelande formulär -->
+  <section class="topic" aria-labelledby="formular-rubrik">
+    <h2 class="topic__title" id="formular-rubrik">Skicka ett meddelande</h2>
+    <form class="contact-form" action="tack.php" method="post">
+      <p class="contact-form__hint">Fält markerade med * är obligatoriska.</p>
+
+      <div class="contact-form__field">
+        <label class="contact-form__field-label" for="namn">Namn *</label>
+        <input class="contact-form__text-field" type="text" name="namn" autocomplete="name" required>
+      </div>
+
+      <div class="contact-form__field">
+        <label class="contact-form__field-label" for="epost">E-postadress *</label>
+        <input class="contact-form__text-field" type="text" name="epost" autocomplete="epost" required>
+      </div>
+
+      <div class="contact-form__field">
+        <label class="contact-form__field-label" for="amne">Ämne *</label>
+        <select class="contact-form__dropdown" id="amne" name="amne" required>
+          <option value="">Välj ett ämne</option>
+          <option value="Rekryterare"></option>
+          <option value="Opp"></option>
+          <option value="Hoe"></option>
+        </select>
+      </div>
+
+      <fieldset class="contact-form__choices">
+        <legend class="contact-form__choices-title">Jag kontaktar dig som *</legend>
+        <div class="contact-form__choice">
+          <input class="contact-form__radio" type="radio" id="roll-rekryterare" name="roll" value="rekryterare" required>
+          <label class="contact-form__field-label contact-form__field-label__inline" for="roll-rekryterare">Rekryterare</label>
+        </div>
+        <div class="contact-form__choice">
+          <input class="contact-form__radio" type="radio" id="roll-utvecklare" name="roll" value="utvecklare" required>
+          <label class="contact-form__field-label contact-form__field-label__inline" for="roll-utvecklare">Utvecklare</label>
+        </div>
+        <div class="contact-form__choice">
+          <input class="contact-form__radio" type="radio" id="roll-student" name="roll" value="student" required>
+          <label class="contact-form__field-label contact-form__field-label__inline" for="roll-student">Student</label>
+        </div>
+        <div class="contact-form__choice">
+          <input class="contact-form__radio" type="radio" id="roll-annan" name="roll" value="annan" required>
+          <label class="contact-form__field-label contact-form__field-label__inline" for="roll-annan">Annan</label>
+        </div>
+      </fieldset>
+
+      <div class="contact-form__field">
+        <label class="contact-form__field-label" for="meddelande">Meddelande *</label>
+        <textarea class="contact-form__message" id="meddelande" name="meddelande" rows="7" maxlength="1000" required
+                  aria-describedby="meddelande-antal" data-js-action="count-characters" data-max-length="1000"></textarea>
+        <p class="contact-form__counter" id="meddelande-antal" data-js-target="character-count" aria-live="polite">Högst 1000 tecken.</p>
+      </div>
+
+      <button class="contact-form__submit" type="submit">Skicka meddelandet</button>
+    </form>
+  </section>
+
+</main>
+
+<!-- Ska vara länkar här om jag orkar, annars får det leda till nåt -->
+<footer class="site-footer">
+  <p class="site-footer__text">&copy; Maxnoliam Pettholblad äger alla rättigheter i världen.</p>
+  <ul class="site-footer__links">
+    <li class="site-footer__item"><a class="site-footer__link" href="/images/MaxSV.jpg" alt="Maxnoliam Pettholblad på en torsdag" width="400" height="400">Maxnoliam Pettholblad på en torsdag.</a></li>
+    <li class="site-footer__item"><a class="site-footer__link" href="/images/noel.png" alt="Maxnoliam Pettholblad på en tisdag." width="400" height="400">Maxnoliam Pettholblad på en tisdag.</a></li>
+  </ul>
+</footer>
 </body>
 </html>

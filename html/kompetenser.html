@@ -3,33 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kompetenser – [Personens namn]</title>
-  <meta name="description" content="TODO: en mening om vad sidan Kompetenser innehåller.">
+  <title>Kompetenser</title>
+  <meta name="description" content="Maxnoliam Pettholblads kompetenser.">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/script.js" defer></script>
 </head>
 <body>
-  <!-- TODO: BEM-klasser enligt kontrakt.md på header, nav, main, footer och deras delar -->
-  <header>
-    <nav aria-label="Huvudmeny">
-      <ul>
-        <li><a href="index.html">Om mig</a></li>
-        <li><a href="kompetenser.html">Kompetenser</a></li>
-        <li><a href="projekt.html">Projekt</a></li>
-        <li><a href="utbildning.html">Utbildning och erfarenhet</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <!-- TODO: länk till er egna sida -->
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <h1>Kompetenser</h1>
-    <!-- TODO: sidans innehåll -->
-  </main>
+<!--
+En massa random skit kommer dyka upp här för jag har tråkigt, man måste ju underhålla sig på nåt sätt.
+Allt random uppfyller samma krav som det som behövs för slutprodukten, bara att byta ut allt till lite mer seriösare innehåll.
+Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
+-->
 
-  <footer>
-    <!-- TODO: sidfot -->
-  </footer>
+
+<header class="site-header">
+  <!-- Gör namnet högst upp till en länk -->
+  <a class="site-header_logo" href="index.html">Maxnolian Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
+
+  <!-- Menyn högst upp som visar kategorier, se till att alla filer finns och att allt ser rätt ut -->
+  <!-- Ska vara exakt samma på alla sidor -->
+  <nav class="main-menu" aria-label="Huvudmeny">
+    <button class="main-menu__toggle" type="button" data-js-action="toggle-menu" aria-expanded="false" aria-controls="main-menu-list">Meny</button>
+    <ul class="main-menu__list" id="main-menu-list" data-js-target="menu">
+      <li class="main-menu__item"><a class="main-menu__link" href="kompetenser.html">Kompetenser</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="projekt.html">Projekt</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="utbildning.html">Utbildning och Erfarenhet</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="certifieringar.html">Certifieringar</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<figure class="profile">
+  <img class="profile__photo" src="/images/piggerfade.png" alt="Ska tas bort ändå" width="480" height="672">
+  <figcaption class="profile__credit">Maxnoliam Pettholblad hemma en vardag. Ludborlun, 2026.</figcaption>
+</figure>
+
+<!-- Huvudtexten, använder 1 - 5 för erfarenhet. 1 - Nybörjare, 2 - Grundläggande, 3 - God, 4 - Avancerad, 5 - Expert -->
+<main class="page" id="main-content">
+  <h1 class="page__title">Mina Kompetenser</h1>
+  <p class="page__intro">Här ser du vilka tekniker jag arbetar med samt min vana med dem. Nivåerna på min kunskap är min egen bedömning, grundad i tidigare arbete, egna projekt och skolarbete.</p>
+
+  <section class="topic" aria-labelledby="teknik-rubrik">
+    <h2 class="topic__title" id="teknik-rubrik">Tekniska Färdigheter</h2>
+    <p class="topic__text">Skalan går från 1 (Grundläggande) till 5 (Expert).</p>
+
+    <table class="skill-matrix">
+      <caption class="skill-matrix__title">Tekniska färdigheter med område, kunskapsnivå och erfarenhet</caption>
+      <thead>
+        <tr class="skill-matrix__row">
+          <th class="skill-matrix__heading" scope="col">Teknik</th>
+          <th class="skill-matrix__heading" scope="col">Område</th>
+          <th class="skill-matrix__heading" scope="col">Kunskapsnivå</th>
+          <th class="skill-matrix__heading" scope="col">Erfarenhet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="skill-matrix__row">
+          <th class="skill-matrix__skill" scope="row">HTML5 och CSS3</th>
+          <th class="skill-matrix__value">Webb</th>
+          <th class="skill-matrix__value">3 av 5 - God</th>
+          <th class="skill-matrix__value">2 år</th>
+        </tr>
+        <tr class="skill-matrix__row">
+          <th class="skill-matrix__skill" scope="row">JavaScript</th>
+          <th class="skill-matrix__value">Webb</th>
+          <th class="skill-matrix__value">2 av 5 - Grundläggande</th>
+          <th class="skill-matrix__value">1 år</th>
+        </tr>
+        <tr class="skill-matrix__row">
+          <th class="skill-matrix__skill" scope="row">C#</th>
+          <th class="skill-matrix__value">Backend</th>
+          <th class="skill-matrix__value">3 av 5 - God</th>
+          <th class="skill-matrix__value">2 år</th>
+        </tr>
+        <tr class="skill-matrix__row">
+          <th class="skill-matrix__skill" scope="row">Python</th>
+          <th class="skill-matrix__value">Backend</th>
+          <th class="skill-matrix__value">3 av 5 - God</th>
+          <th class="skill-matrix__value">2 år</th>
+        </tr>
+        <tr class="skill-matrix__row">
+          <th class="skill-matrix__skill" scope="row">SQL</th>
+          <th class="skill-matrix__value">Databaser</th>
+          <th class="skill-matrix__value">2 av 5 - Grundläggande</th>
+          <th class="skill-matrix__value">1 år</th>
+        </tr>
+        <tr class="skill-matrix__row">
+          <th class="skill-matrix__skill" scope="row">GitHub</th>
+          <th class="skill-matrix__value">Verktyg</th>
+          <th class="skill-matrix__value">3 av 5 - God</th>
+          <th class="skill-matrix__value">2 år</th>
+        </tr>
+        <tr class="skill-matrix__row">
+          <th class="skill-matrix__skill" scope="row">Linux</th>
+          <th class="skill-matrix__value">Drift</th>
+          <th class="skill-matrix__value">5 av 5 - Expert</th>
+          <th class="skill-matrix__value">4 år</th>
+        </tr>
+        <tr class="skill-matrix__row">
+          <th class="skill-matrix__skill" scope="row">OWASP Top 10</th>
+          <th class="skill-matrix__value">Säkerhet</th>
+          <th class="skill-matrix__value">5 av 5 - Expert</th>
+          <th class="skill-matrix__value">13 år</th>
+        </tr>
+        <tr class="skill-matrix__row">
+          <th class="skill-matrix__skill" scope="row">BurpSuite och WireShark</th>
+          <th class="skill-matrix__value">Säkerhet</th>
+          <th class="skill-matrix__value">5 av 5 - Expert</th>
+          <th class="skill-matrix__value">13 år</th>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Personliga egenskaper -->
+  <section class="topic" aria-labelledby="egenskap-rubrik">
+    <h2 class="topic__title" id="egenskap-rubrik">Personliga Egenskaper</h2>
+    <ul class="topic__point">
+      <li class="topic__point">Aldrig lugn, alltid kaos. Går något sönder gråter jag och springer iväg.</li>
+      <li class="topic__point">Kronisk narkoleptiker och mytoman.</li>
+      <li class="topic__point">Inte intresserad i något förutom allt som leder till min personliga vinst.</li>
+    </ul>
+  </section>
+
+  <!-- Arbetssätt -->
+  <section class="topic" aria-labelledby="arbetssatt-rubrik">
+    <h2 class="topic__title" id="arbetssatt-rubrik">Så arbetar jag</h2>
+    <h3>Du bestämmer inte över mig</h3>
+    <p>Jag kommer och går som jag vill. Anser du att jag är 4 timmar sen? Fuck you.</p>
+    <h3>Jag är min egen boss</h3>
+    <p>Jag sätter mina egna tider och mina egna förväntningskrav. Din beta åsikt spelar ingen roll för Alfan.</p>
+  </section>
+</main>
+
+<!-- Ska vara länkar här om jag orkar, annars får det leda till nåt -->
+<footer class="site-footer">
+  <p class="site-footer__text">&copy; Maxnoliam Pettholblad äger alla rättigheter i världen.</p>
+  <ul class="site-footer__links">
+    <li class="site-footer__item"><a class="site-footer__link" href="/images/MaxSV.jpg" alt="Maxnoliam Pettholblad på en torsdag" width="400" height="400">Maxnoliam Pettholblad på en torsdag.</a></li>
+    <li class="site-footer__item"><a class="site-footer__link" href="/images/noel.png" alt="Maxnoliam Pettholblad på en tisdag." width="400" height="400">Maxnoliam Pettholblad på en tisdag.</a></li>
+  </ul>
+</footer>
 </body>
 </html>
