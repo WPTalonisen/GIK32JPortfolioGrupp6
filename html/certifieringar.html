@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maxnoliam Pettholblad Portfolio</title>
+    <meta name="description" content="Grundläggande information om vem Maxnoliam Pettholblad är och aspirerar att bli.">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+<!--
+En massa random skit kommer dyka upp här för jag har tråkigt, man måste ju underhålla sig på nåt sätt.
+Allt random uppfyller samma krav som det som behövs för slutprodukten, bara att byta ut allt till lite mer seriösare innehåll.
+Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
+-->
+
+
+
+
+<!--- Länk som hoppar över info och går rakt till det en anställare behöver veta -->
+<a class="skip-link" href="#main-content">Hoppa till huvudinnehållet</a>
+
+<header class="site-header">
+    <!-- Gör namnet högst upp till en länk -->
+    <a class="site-header_logo" href="index.html">Maxnolian Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
+
+    <!-- Menyn högst upp som visar kategorier, se till att alla filer finns och att allt ser rätt ut -->
+    <!-- Ska vara exakt samma på alla sidor -->
+    <nav class="main-menu" aria-label="Huvudmeny">
+        <button class="main-menu__toggle" type="button" data-js-action="toggle-menu" aria-expanded="false" aria-controls="main-menu-list">Meny</button>
+        <ul class="main-menu__list" id="main-menu-list" data-js-target="menu">
+            <li class="main-menu__item"><a class="main-menu__link" href="kompetenser.html">Kompetenser</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="projekt.html">Projekt</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="utbildning.html">Utbildning och Erfarenhet</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="certifieringar.html">Certifieringar</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Huvudtexten, "vem är jag?" -->
+<main class="page" id="main-content">
+    <h1 class="page__title">Certifieringar och Kurser</h1>
+    <p class="page__intro">Utöver utbildningen strävar jag för att fördjupa mina kunskaper med certifieringar. Här ser ni vad jag har klarat och vad jag arbetar mot.</p>
+
+    <section class="topic" aria-labelledby="cert-rubrik">
+        <h2 class="topic__title" id="cert-rubrik">Avklarade Certifieringar</h2>
+        <article class="card card--featured" aria-labelledby="secplus-rubrik">
+            <h3 class="card__title" id="secplus-rubrik">CompTIA Security+</h3>
+            <p class="card__facts">Utfärdad <time datetime="2025-11">November 2025</time></p>
+            <p class="card__text">Grundläggande certifiering i IT-säkerhet: Hot och sårbarheter, kryptering, identitetshantering och incidenthantering.</p>
+        </article>
+        <article class="card card--featured" aria-labelledby="az900-rubrik">
+            <h3 class="card__title" id="az900-rubrik">Microsoft Azure Fundamentals</h3>
+            <p class="card__facts">Utfärdad <time datetime="2025-12">December 2025</time></p>
+            <p class="card__text">Molntjänster i Azure: grundbegre, säkerhet, prissättning och styrning.</p>
+        </article>
+    </section>
+
+    <section class="topic" aria-labelledby="pagaende-rubrik">
+        <h2 class="topic__title" id="pagaende-rubrik">Avklarade Certifieringar</h2>
+        <article class="card card--featured" aria-labelledby="ccna-rubrik">
+            <h3 class="card__title" id="ccna-rubrik">CompTIA Security+</h3>
+            <p class="card__facts">Utfärdad <time datetime="2025-11">November 2025</time></p>
+            <p class="card__text">Grundläggande certifiering i IT-säkerhet: Hot och sårbarheter, kryptering, identitetshantering och incidenthantering.</p>
+        </article>
+    </section>
+
+    <section class="topic" aria-labelledby="kurser-rubrik">
+        <h2 class="topic__title" id="kurser-rubrik">Kortare kurser</h2>
+        <ul class="topic__points">
+            <li class="topic__point">OWASP Top 10 för utvecklare, 20 timmar, 2026</li>
+            <li class="topic__point">Introduktion till penetrationstestning, 40 timmar, 2026</li>
+            <li class="topic__point">Digital tillgänglighet enligt WCAG 2.1, 15 timmar, 2025</li>
+            <li class="topic__point">TryHackMe, från 2024</li>
+        </ul>
+
+    </section>
+</main>
+
+<!-- Ska vara länkar här om jag orkar, annars får det leda till nåt -->
+<footer class="site-footer">
+    <p class="site-footer__text">&copy; Maxnoliam Pettholblad äger alla rättigheter i världen.</p>
+    <ul class="site-footer__links">
+        <li class="site-footer__item"><a class="site-footer__link" href="/images/MaxSV.jpg" alt="Maxnoliam Pettholblad på en torsdag" width="400" height="400">Maxnoliam Pettholblad på en torsdag.</a></li>
+        <li class="site-footer__item"><a class="site-footer__link" href="/images/noel.png" alt="Maxnoliam Pettholblad på en tisdag." width="400" height="400">Maxnoliam Pettholblad på en tisdag.</a></li>
+    </ul>
+</footer>
+</body>
+</html>
