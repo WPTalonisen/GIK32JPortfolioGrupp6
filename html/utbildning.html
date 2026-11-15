@@ -3,33 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Utbildning och erfarenhet – [Personens namn]</title>
-  <meta name="description" content="TODO: en mening om vad sidan Utbildning och erfarenhet innehåller.">
+  <title>Maxnoliam Pettholblad Utbildning och Erfarenhet</title>
+  <meta name="description" content="Grundläggande information om vem Maxnoliam Pettholblad är och aspirerar att bli.">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/script.js" defer></script>
 </head>
 <body>
-  <!-- TODO: BEM-klasser enligt kontrakt.md på header, nav, main, footer och deras delar -->
-  <header>
-    <nav aria-label="Huvudmeny">
-      <ul>
-        <li><a href="index.html">Om mig</a></li>
-        <li><a href="kompetenser.html">Kompetenser</a></li>
-        <li><a href="projekt.html">Projekt</a></li>
-        <li><a href="utbildning.html">Utbildning och erfarenhet</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <!-- TODO: länk till er egna sida -->
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <h1>Utbildning och erfarenhet</h1>
-    <!-- TODO: sidans innehåll -->
-  </main>
+<!--
+En massa random skit kommer dyka upp här för jag har tråkigt, man måste ju underhålla sig på nåt sätt.
+Allt random uppfyller samma krav som det som behövs för slutprodukten, bara att byta ut allt till lite mer seriösare innehåll.
+Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
+-->
 
-  <footer>
-    <!-- TODO: sidfot -->
-  </footer>
+
+
+
+<!--- Länk som hoppar över info och går rakt till det en anställare behöver veta -->
+<a class="skip-link" href="#main-content">Hoppa till huvudinnehållet</a>
+
+<header class="site-header">
+  <!-- Gör namnet högst upp till en länk -->
+  <a class="site-header_logo" href="index.html">Maxnolian Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
+
+  <!-- Menyn högst upp som visar kategorier, se till att alla filer finns och att allt ser rätt ut -->
+  <!-- Ska vara exakt samma på alla sidor -->
+  <nav class="main-menu" aria-label="Huvudmeny">
+    <button class="main-menu__toggle" type="button" data-js-action="toggle-menu" aria-expanded="false" aria-controls="main-menu-list">Meny</button>
+    <ul class="main-menu__list" id="main-menu-list" data-js-target="menu">
+      <li class="main-menu__item"><a class="main-menu__link" href="kompetenser.html">Kompetenser</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="projekt.html">Projekt</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="utbildning.html">Utbildning och Erfarenhet</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="certifieringar.html">Certifieringar</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Huvudtexten, "vem är jag?" -->
+<main class="page" id="main-content">
+  <h1 class="page__title">Utbildning och Erfarenhet</h1>
+  <p class="page__intro">Min väg in i IT har gått genom kundsupport och drift. Den erfarenheten gör att jag alltid tänker på slutanvändaren.</p>
+
+  <section class="topic" aria-labelledby="utbildning-rubrik">
+    <h2 class="topic__title" id="utbildning-rubrik">Utbildning</h2>
+    <ul class="timeline">
+      <li class="timeline__item">
+        <h3 class="timeline__title">IT-Säkerhet och Mjukvarutestning, 5 HP</h3>
+        <p class="timeline__period"><time datetime="2025-08">Augusti</time> - <time datetime="2027-06">Juni 2027</time> Grängesbergs Gruvhål</p>
+        <p class="timeline__text">Backendutvekling i C# och Python, säker mjukvaruutveckling, nätverkssäkerhet, SOLID och APIE</p>
+      </li>
+      <li class="timeline__item">
+        <h3 class="timeline__title">Google Cyber Security Course, Certificat</h3>
+        <p class="timeline__period"><time datetime="2025-05">Maj</time> - <time datetime="2025-06">Juni</time> Hemma</p>
+        <p class="timeline__text">Googles egna Cyber Security kurs, Python, C#, backend, frontend och allt omkring.</p>
+      </li>
+      <li class="timeline__item">
+        <h3 class="timeline__title">Samhällsprogrammet</h3>
+        <p class="timeline__period"><time datetime="2016-08">Augusti</time> - <time datetime="2018-06">Juni 2027</time> Ludborluns Dåliga Gymnasie</p>
+        <p class="timeline__text">Ingen relevant utbildning där.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Karriärmål, pretty much exakt samma som huvudtexten -->
+  <section class="topic" aria-labelledby="ovrigt-rubrik">
+    <h2 class="topic__title" id="ovrigt-rubrik">Övriga meriter</h2>
+    <dl class="fact-list">
+      <dt class="fact-list__term">Språk</dt>
+      <dd class="fact-list__value">Svenska (modersmål), Engelska(flytande), Kod(hacker), Latin</dd>
+      <dt class="fact-list__term">Körkort</dt>
+      <dd class="fact-list__value">B-Körkort, Drönare (A1, A2, A3), Truck-kort, Travers-kort</dd>
+      <dt class="fact-list__term">Certifieringar</dt>
+      <dd class="fact-list__value">Google Cyber Security Analyst, SSG, Heta Arbeten, ELSA, Handintensivt Arbete, Sax-/bomlift (mobila arbetsplattformar), Härdplastundersökning, Transformatorskola, Lyftsäkerhet, MB, Hitachi introduktionsdag för nyanställda, Fair Process, Enviromental Essentials, SOT 2.0, Health Resilience 2.0</dd>
+      <dt class="fact-list__term">Tillstånd</dt>
+      <dd class="fact-list__value">Traverskran - Cranes (A1 - Traverse radio operated, A2 - Traverse hanging maneuvered, B1 - Portal radio operated, B2 - Portal hanging maneuvered, C1 - Portal radio operated, C2 - Portal hanging maneuvered, D1 - Portal radio maneuvered, D2 - Portal hanging maneuvered, E1 - Portal radio maneuvered, E2 - Portal hanging maneuvered, F1 - Portal radio maneuvered, F2 - Portal hanging maneuvered).
+      TAC A-truck - Trucks (A1 - low lift order picker, A2 - Joint stacker, A3 - Low lift pickup truck, A4 - Low lifter). TAC B1-B3 Truck Trucks (B1 - Counterbalance truck, B2 - High-lift stacker, B3 - Reach truck). TAC Liftar och Fallskydd - Lifts (A1 - Scissors / column lift with support legs, A2 - Track-bound scissor lift, A3 - Self-propelled scissors / column lift, B1 - Car / Trailer-mounted boom lift with support legs, caterpillar / crawler lift, B2 - Track-bound boom lift / under-bridge lift, B3 - Self-propelled boom lift / Folding arm lift).
+      </dd>
+    </dl>
+  </section>
+
+  <!-- Lite info som sitter i en ruta på sidan av huvud texten, länkar till kontakt längst ner. -->
+  <aside class="sidebar" aria-labelledby="fakta-rubrik">
+    <h2 class="sidebar_title" id="fakta-rubrik">Snabbfakta</h2>
+    <dl class="fact-list">
+      <dt class="fact-list__term">Ort</dt>
+      <dd class="fact-list__value">Ludborlun</dd>
+      <dt class="fact-list__term">Vem jag redan hackat</dt>
+      <dd class="fact-list__value">Dig</dd>
+      <dt class="fact-list__term">Vem jag ska hacka</dt>
+      <dd class="fact-list__value">Alla</dd>
+    </dl>
+    <p class="sidebar__text"><a class="sidebar__link" href="kontakt.html">Kontakta Maxnoliam om för att bli hackad.</a></p>
+  </aside>
+</main>
+
+<!-- Ska vara länkar här om jag orkar, annars får det leda till nåt -->
+<footer class="site-footer">
+  <p class="site-footer__text">&copy; Maxnoliam Pettholblad äger alla rättigheter i världen.</p>
+  <ul class="site-footer__links">
+    <li class="site-footer__item"><a class="site-footer__link" href="/images/MaxSV.jpg" alt="Maxnoliam Pettholblad på en torsdag" width="400" height="400">Maxnoliam Pettholblad på en torsdag.</a></li>
+    <li class="site-footer__item"><a class="site-footer__link" href="/images/noel.png" alt="Maxnoliam Pettholblad på en tisdag." width="400" height="400">Maxnoliam Pettholblad på en tisdag.</a></li>
+  </ul>
+</footer>
 </body>
 </html>

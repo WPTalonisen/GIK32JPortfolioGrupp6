@@ -3,33 +3,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projekt – [Personens namn]</title>
-  <meta name="description" content="TODO: en mening om vad sidan Projekt innehåller.">
+  <title>Maxnoliam Pettholblad Portfolio</title>
+  <meta name="description" content="Grundläggande information om vem Maxnoliam Pettholblad är och aspirerar att bli.">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/script.js" defer></script>
 </head>
 <body>
-  <!-- TODO: BEM-klasser enligt kontrakt.md på header, nav, main, footer och deras delar -->
-  <header>
-    <nav aria-label="Huvudmeny">
-      <ul>
-        <li><a href="index.html">Om mig</a></li>
-        <li><a href="kompetenser.html">Kompetenser</a></li>
-        <li><a href="projekt.html">Projekt</a></li>
-        <li><a href="utbildning.html">Utbildning och erfarenhet</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <!-- TODO: länk till er egna sida -->
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <h1>Projekt</h1>
-    <!-- TODO: sidans innehåll -->
-  </main>
+<!--
+En massa random skit kommer dyka upp här för jag har tråkigt, man måste ju underhålla sig på nåt sätt.
+Allt random uppfyller samma krav som det som behövs för slutprodukten, bara att byta ut allt till lite mer seriösare innehåll.
+Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
+-->
 
-  <footer>
-    <!-- TODO: sidfot -->
-  </footer>
+
+
+
+<!--- Länk som hoppar över info och går rakt till det en anställare behöver veta -->
+<a class="skip-link" href="#main-content">Hoppa till huvudinnehållet</a>
+
+<header class="site-header">
+  <!-- Gör namnet högst upp till en länk -->
+  <a class="site-header_logo" href="index.html">Maxnolian Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
+
+  <!-- Menyn högst upp som visar kategorier, se till att alla filer finns och att allt ser rätt ut -->
+  <!-- Ska vara exakt samma på alla sidor -->
+  <nav class="main-menu" aria-label="Huvudmeny">
+    <button class="main-menu__toggle" type="button" data-js-action="toggle-menu" aria-expanded="false" aria-controls="main-menu-list">Meny</button>
+    <ul class="main-menu__list" id="main-menu-list" data-js-target="menu">
+      <li class="main-menu__item"><a class="main-menu__link" href="kompetenser.html">Kompetenser</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="projekt.html">Projekt</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="utbildning.html">Utbildning och Erfarenhet</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="certifieringar.html">Certifieringar</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Huvudtexten -->
+<main class="page" id="main-content">
+  <h1 class="page__title">Projekt</h1>
+  <p class="page__intro">Ett urval av skolprojekt och egna projekt. Varje projekt har öppen källkod på GitHub</p>
+
+  <section class="filter" aria-labelledby="filter-rubrik">
+    <h2 class="filter__title" id="filter-rubrik">Filtrera Projekt</h2>
+    <ul class="filter__options">
+      <li class="filter__item"><button class="filter__option--active" type="button" data-js-action="filter-projects" data-category="alla" aria-pressed="alla">Alla projekt</button></li>
+      <li class="filter__item"><button class="filter__option--active" type="button" data-js-action="filter-projects" data-category="webbprojekt" aria-pressed="false">Webbprojekt</button></li>
+      <li class="filter__item"><button class="filter__option--active" type="button" data-js-action="filter-projects" data-category="sakerhet" aria-pressed="false">Säkerhetsprojekt</button></li>
+      <li class="filter__item"><button class="filter__option--active" type="button" data-js-action="filter-projects" data-category="data" aria-pressed="false">Dataprojekt</button></li>
+    </ul>
+    <p class="filter__status" data-js-target="filter-status" aria-live="polite">Visar alla 4 projekt</p>
+  </section>
+
+  <!-- Första delen i projektlistan, bara att köra copy paste om man vill ha fler -->
+  <section class="topic" aria-labelledby="lista-rubrik">
+    <h2 class="topic__title" id="lista-rubrik">Projektlista</h2>
+    <div class="projekt-list" data-js-target="project-list">
+      <article class="card card--featured" data-category="sakerhet" aria-labelledby="sakerhetsloggen-rubrik">
+        <h3 class="card__title" id="sakerhetsloggen-rubrik">Säkerhetsloggen</h3>
+        <p class="card__facts">Examensprojekt 2026: Python, Elastisearch och Docker</p>
+        <figure class="card__screenshot">
+          <img class="card__image" src="______________" alt="__________" width="" height="">
+          <figcaption class="card__screenshot-text">_______________</figcaption>
+        </figure>
+        <p class="card__text">En lätt logganalys som samlar inloggningsförsök från flera servrar och larmar vid misstänkta mönster.</p>
+        <ul class="card__tags" aria-label="Tekniker i Säkerhetsloggen">
+          <li class="card__tag">Python</li>
+          <li class="card__tag">Elastisearch</li>
+          <li class="card__tag">Docker</li>
+        </ul>
+
+        <button class="card__toggle" type="button" data-js-action="toggle-details" aria-expanded="true" aria-controls="sakerhetsloggen-mer">Visa mer om Säkerhetsloggen</button>
+        <div class="card__more" id="sakerhetsloggen-mer" data-js-target="project-details">
+          <h4 class="card__subtitle">Så byggde jag det</h4>
+          <p class="card__text">Loggarna skickas via Filebeat till Elastisearch. Ett Python-skript körs varje minut, letar efter avvikelser och skickar larm till en chattkanal. Hela miljön startas med ett enda Docker Compose-kommando</p>
+          <p class="card__text"><a class="card__link" href="https://github.com">Källkoden till Säkerhetsloggen på GitHub</a></p>
+        </div>
+      </article>
+
+      <article class="card card--featured" data-category="webb" aria-labelledby="padelbokning-rubrik">
+        <h3 class="card__title" id="padelbokning-rubrik">Padelbokningen</h3>
+        <p class="card__facts">Skolprojekt 2025: C#, ASP.NET Core, PostgreSQL</p>
+        <figure class="card__screenshot">
+          <img class="card__image" src="______________" alt="__________" width="" height="">
+          <figcaption class="card__screenshot-text">____________</figcaption>
+        </figure>
+        <p class="card__text">En bokningstjänst för en fiktiv padelhall där medlemmar kan boka banor, betala och avboka direkt i mobilen</p>
+        <ul class="card__tags" aria-label="Tekniker i Padelbokningen">
+          <li class="card__tag">C#</li>
+          <li class="card__tag">ASP.NET Core</li>
+          <li class="card__tag">PostgreSQL</li>
+        </ul>
+
+        <button class="card__toggle" type="button" data-js-action="toggle-details" aria-expanded="true" aria-controls="padelbokning-mer">Visa mer om Padelbokningen</button>
+        <div class="card__more" id="padelbokning-mer" data-js-target="project-details">
+          <h4 class="card__subtitle">Så byggde jag det</h4>
+          <p class="card__text">Jag byggde ett REST-API med ASP.NET Core och Entity Framework. Inloggningen använder tvåstegsverifiering och alla formulär skyddas mot CSRF (förfalskade anrop). Gränssnittet klarar WCAG 2.1 AA.</p>
+          <p class="card__text"><a class="card__link" href="https://github.com">Källkoden till Padelbokningen på GitHub</a></p>
+        </div>
+      </article>
+
+      <article class="card card--featured" data-category="webb" aria-labelledby="tillganglighetsskannern-rubrik">
+        <h3 class="card__title" id="tillganglighetsskannern-rubrik">Tillgänglighetsskannern</h3>
+        <p class="card__facts">Eget projekt 2026: JavaScript, Node.js</p>
+        <figure class="card__screenshot">
+          <img class="card__image" src="______________" alt="__________" width="" height="">
+          <figcaption class="card__screenshot-text">_______________</figcaption>
+        </figure>
+        <p class="card__text">Ett kommandoradsverktyg som går igenom en webbplats och listar vanliga tillgänglighetsfel, som bilder utan alt-text och felaktig rubrikordning</p>
+        <ul class="card__tags" aria-label="Tekniker i Säkerhetsloggen">
+          <li class="card__tag">JavaScript</li>
+          <li class="card__tag">Node.js</li>
+          <li class="card__tag">WCAG</li>
+        </ul>
+
+        <button class="card__toggle" type="button" data-js-action="toggle-details" aria-expanded="true" aria-controls="tillganglighetsskannern-mer">Visa mer om säkerhetsloggen</button>
+        <div class="card__more" id="tillganglighetsskannern-mer" data-js-target="project-details">
+          <h4 class="card__subtitle">Så byggde jag det</h4>
+          <p class="card__text">Verktyget läser HTML-filer, bygger ett dokumentträd och kör ett tjugotal regler mot det. Resultatet skrivs ut i terminalen eller som JSON, så att det kan användas i en CI-pipeline.</p>
+          <p class="card__text"><a class="card__link" href="https://github.com">Källkoden till Säkerhetsloggen på GitHub</a></p>
+        </div>
+      </article>
+
+      <article class="card card--featured" data-category="data" aria-labelledby="elpriskollen-rubrik">
+        <h3 class="card__title" id="elpriskollen-rubrik">Elpriskollen</h3>
+        <p class="card__facts">Skolprojekt 2024: Python, pandas, SQL</p>
+        <figure class="card__screenshot">
+          <img class="card__image" src="______________" alt="__________" width="" height="">
+          <figcaption class="card__screenshot-text">_______________</figcaption>
+        </figure>
+        <p class="card__text">En analys av svenska elpriser timme för timme som visar när det lönar sig att ladda elbilen eller köra tvättmaskinen.</p>
+        <ul class="card__tags" aria-label="Tekniker i Säkerhetsloggen">
+          <li class="card__tag">Python</li>
+          <li class="card__tag">pandas</li>
+          <li class="card__tag">SQL</li>
+        </ul>
+
+        <button class="card__toggle" type="button" data-js-action="toggle-details" aria-expanded="true" aria-controls="elpriskollen-mer">Visa mer om säkerhetsloggen</button>
+        <div class="card__more" id="elpriskollen-mer" data-js-target="project-details">
+          <h4 class="card__subtitle">Så byggde jag det</h4>
+          <p class="card__text">Prisdata hämtas varje natt från ett öppet API och sparas i en SQLite-databas. Med pandas räknar jag fram de billigaste timmarna och presenterar dem i en enkel webbrapport.</p>
+          <p class="card__text"><a class="card__link" href="https://github.com">Källkoden till Säkerhetsloggen på GitHub</a></p>
+        </div>
+      </article>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- Ska vara länkar här om jag orkar, annars får det leda till nåt -->
+<footer class="site-footer">
+  <p class="site-footer__text">&copy; Maxnoliam Pettholblad äger alla rättigheter i världen.</p>
+  <ul class="site-footer__links">
+    <li class="site-footer__item"><a class="site-footer__link" href="/images/MaxSV.jpg" alt="Maxnoliam Pettholblad på en torsdag" width="400" height="400">Maxnoliam Pettholblad på en torsdag.</a></li>
+    <li class="site-footer__item"><a class="site-footer__link" href="/images/noel.png" alt="Maxnoliam Pettholblad på en tisdag." width="400" height="400">Maxnoliam Pettholblad på en tisdag.</a></li>
+  </ul>
+</footer>
 </body>
 </html>
