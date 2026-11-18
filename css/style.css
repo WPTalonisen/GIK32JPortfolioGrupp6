@@ -3,12 +3,13 @@
 /* Själva webbsidans grundläggande bakgrund och textfärg */
 
 :root {
+    color-scheme: dark;                /* mörka formulärkontroller, scrollbars m.m. */
     --font-sans: system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
     --color-paper: #0d1117;            /* bakgrund (var ljus, nu mörk) */
     --color-ink: #e6edf3;              /* text (var mörk, nu ljus) */
     --color-blueprint: #4d8dff;        /* accentblå, ljusare så den syns på mörkt */
     --color-blueprint-hover: #79a8ff;
-    --color-panel: #161b22;            /* rutor */
+    --color-panel: #1e2630;            /* rutor */
     --color-line: #30363d;             /* linjer och ramar */
     --color-muted: #9ba5b0;            /* nedtonad text */
     --color-danger: #f97066;
@@ -307,17 +308,18 @@ textarea:focus-visible {
 
 /* På bredare skärmar: två kolumner – innehållet till vänster, sidoboxen till höger */
 @media (min-width: 48rem) {
-    .page {
+    /* Bara sidor som har en sidobox får två kolumner */
+    .page:has(> .sidebar) {
         display: grid;
         grid-template-columns: minmax(0, 1fr) 18rem;
         column-gap: 3rem;
         align-items: start;
     }
-    .page > * {
+    .page:has(> .sidebar) > * {
         grid-column: 1;
     }
     /* I grid läggs marginaler ihop i stället för att överlappa – undvik dubbelt mellanrum */
-    .page__intro {
+    .page:has(> .sidebar) > .page__intro {
         margin-bottom: 0;
     }
     .page > .sidebar {
@@ -426,14 +428,18 @@ textarea:focus-visible {
 
 /* Knappen för att snabbkopiera e-postadressen */
 .contact-list__copy {
-    background: var(--color-panel);
-    border: 0;
+    background: transparent;
+    color: var(--color-ink);
+    border: 1px solid var(--color-line);
+    font: inherit;
+    font-size: 0.875rem;
     border-radius: var(--radius-pill);
     padding: 0.4rem 1rem;
     cursor:pointer;
 }
 .contact-list__copy:hover{
-    background-color: var(--color-line);
+    border-color: var(--color-blueprint);
+    color: var(--color-blueprint);
 }
 /* Statustext som visar att e-postadressen kopierats */
 .contact-list__status {
@@ -467,6 +473,7 @@ textarea:focus-visible {
 .contact-form__text-field,.contact-form__dropdown,.contact-form__message{
     width: 100%;
     font: inherit;
+    color: var(--color-ink);
     padding: 0.75rem 1rem;
     background: var(--color-paper);
     border: 1px solid var(--color-line);
@@ -492,10 +499,19 @@ textarea:focus-visible {
     text-align: right;
 }
 
-/* Skicka-knappen i formuläret */
-.contact-form__choice {
+/* Gruppen med radioknappar (<fieldset>) – ta bort webbläsarens standardram */
+.contact-form__choices {
     border: 0;
-
+    padding: 0;
+    margin: 0;
+}
+.contact-form__choices-title {
+    padding: 0;
+}
+/* Alternativen i dropdown-listan */
+.contact-form__dropdown option {
+    color: var(--color-ink);
+    background-color: var(--color-paper);
 }
 .contact-form__choices-title{
     font-weight: 500;
