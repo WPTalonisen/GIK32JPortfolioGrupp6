@@ -24,13 +24,14 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
 
   <header class="site-header">
     <!-- Gör namnet högst upp till en länk -->
-    <a class="site-header_logo" href="index.html">Maxnolian Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
+    <a class="site-header_logo" href="index.html">Maxnoliam Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
 
     <!-- Menyn högst upp som visar kategorier, se till att alla filer finns och att allt ser rätt ut -->
     <!-- Ska vara exakt samma på alla sidor -->
     <nav class="main-menu" aria-label="Huvudmeny">
       <button class="main-menu__toggle" type="button" data-js-action="toggle-menu" aria-expanded="false" aria-controls="main-menu-list">Meny</button>
       <ul class="main-menu__list" id="main-menu-list" data-js-target="menu">
+        <li class="main-menu__item"><a class="main-menu__link" href="index.html">Hem</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="kompetenser.html">Kompetenser</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="projekt.html">Projekt</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="utbildning.html">Utbildning och Erfarenhet</a></li>
@@ -48,19 +49,19 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
     <section class="topic" aria-labelledby="vem-rubrik">
       <h2 class="topic__title" id="vem-rubrik">Vem är jag?</h2>
       <figure class="profile">
-        <img class="profile__photo" src="../images/jagmuskel.jpeg" alt="Porträtt av Maxnoliam Pettholblad som spänner sig och visar sina muskler. Bilden är svartvit och man ser nästan hela kroppen. Musklerna är sexiga och veniga. Han är oljad och glänser sexigt.">
-        <figcaption class="profile__credit">Maxnoliam Pettholblad hemma en vardag. Ludborlun, 2026.</figcaption>
+        <img class="profile__photo" src="../images/profilbild.jpg" alt="Porträtt av Maxnoliam Pettholblad i mörkblå kostym som står och ler framför kameran.">
+        <figcaption class="profile__credit">Maxnoliam Pettholblad LinkedIn profilbild.</figcaption>
       </figure>
-      <p class="topic__text">Jag är 13 år gammal och bor i Ludborlun. Innan jag började studera jobbade jag som professionell soffpotatis inom soffbranchen. Där var jag en ledande spelare och både stresstestade soffans integritet med min vikt och chipssmulor samt som jag på egen hand konsumerade mer än 10 tusen kalorier i timmen.</p>
-      <p class="topic__text">Idag läser jag andra året på utbildningen IT-säkerhet och Mjukvarutestning. Jag trivs bäst i backend där jag kan fokusera på säkerheten: att bygga API:er, granska kod och hitta svagheter innan någon annan luring kan hitta dom gör det alltid roligt och intressant. Liksom, tänk om någon hittar alla fel innan mig? Fan vad stressigt.</p>
-      <p class="topic__text">På fritiden brukar jag lägga in all källkod jag snor från företag och liknande och lägga in i Claude för att hitta svagheter så jag kan hacka dom under ett alias. Det är så jag ska bli rik.</p>
+      <p class="topic__text">Jag bor i Ludborlun och läser andra året på programmet IT-säkerhet och Mjukvarutestning vid Högskolan Dalarna i Borlänge. Mitt intresse för säkerhet började med att jag ville förstå hur system faktiskt fungerar, och hur de går sönder.</p>
+      <p class="topic__text">Jag trivs bäst i backend, där jag kan fokusera på säkerheten. Det kan handla om att bygga API:er, granska kod och hitta svagheter innan någon annan gör det. Jag gillar att tänka som en angripare för att kunna bygga som en försvarare, och jag tycker att säkerhet ska finnas med från första raden kod och inte läggas på i efterhand.</p>
+      <p class="topic__text">På fritiden fördjupar jag mig i säkerhet på egen hand, bland annat genom övningsplattformar och CTF-utmaningar där man lagligt får öva på att hitta och utnyttja sårbarheter. Målet är att bli en specialist som team kan lita på, både när något ska byggas och när något har gått fel.</p>
     </section>
 
     <!-- Karriärmål, pretty much exakt samma som huvudtexten -->
     <section class="topic" aria-labelledby="mal-rubrik">
       <h2 class="topic__title" id="mal-rubrik">Mina Karriärmål</h2>
       <p class="topic__text">De kommande åren vill jag växa till en IT-säkerhetsspecialist som team kan lita på oavsätt ärende.</p>
-      <ul class="topic:__point" aria-labelledby="mal-rubrik">
+      <ul class="topic__point" aria-labelledby="mal-rubrik">
         <li class="topic__point">Kortsiktigt: Hacka Apple och Amazon och blackmaila dom så jag får cash.</li>
         <li class="topic__point">Inom två år: Arbeta som professionell hacker.</li>
         <li class="topic__point">Inom fem år: Bli superhacker och få en Netflix dokumentär skriven om mig, spelad av Ryan Gosling.</li>
@@ -69,16 +70,16 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
 
     <!-- Lite info som sitter i en ruta på sidan av huvud texten, länkar till kontakt längst ner. -->
     <aside class="sidebar" aria-labelledby="fakta-rubrik">
-      <h2 class="sidebar_title" id="fakta-rubrik">Snabbfakta</h2>
+      <h2 class="sidebar__title" id="fakta-rubrik">Snabbfakta</h2>
       <dl class="fact-list">
         <dt class="fact-list__term">Ort</dt>
         <dd class="fact-list__value">Ludborlun</dd>
         <dt class="fact-list__term">Vem jag redan hackat</dt>
-        <dd class="fact-list__value">Dig</dd>
+        <dd class="fact-list__value">Dig, KGB, CIA, FBI, Mosadd, Kim Jong Un´s hårlinje</dd>
         <dt class="fact-list__term">Vem jag ska hacka</dt>
-        <dd class="fact-list__value">Alla</dd>
+        <dd class="fact-list__value">Högskolan Dalarna, SÄPO, McDonalds Sverige, Cirkle K Karlstad</dd>
       </dl>
-      <p class="sidebar__text"><a class="sidebar__link" href="kontakt.html">Kontakta Maxnoliam om för att bli hackad.</a></p>
+      <p class="sidebar__text"><a class="sidebar__link" href="kontakt.html">Kontakta Maxnoliam om att bli hackad.</a></p>
     </aside>
   </main>
 
@@ -86,8 +87,8 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
   <footer class="site-footer">
     <p class="site-footer__text">&copy; Maxnoliam Pettholblad äger alla rättigheter i världen.</p>
     <ul class="site-footer__links">
-      <li class="site-footer__item"><a class="site-footer__link" href="../images/MaxSV.jpg" alt="Maxnoliam Pettholblad på en torsdag" width="400" height="400">Maxnoliam Pettholblad på en torsdag.</a></li>
-      <li class="site-footer__item"><a class="site-footer__link" href="../images/noel.png" alt="Maxnoliam Pettholblad på en tisdag." width="400" height="400">Maxnoliam Pettholblad på en tisdag.</a></li>
+      <li class="site-footer__item"><a class="site-footer__link" href="https://github.com/" alt="GitHub länk">Maxnoliam Pettholblad på GitHub</a></li>
+      <li class="site-footer__item"><a class="site-footer__link" href="https://www.linkedin.com/" alt="LinkedIn länk">Maxnoliam Pettholblad på LinkedIn</a></li>
     </ul>
   </footer>
 </body>

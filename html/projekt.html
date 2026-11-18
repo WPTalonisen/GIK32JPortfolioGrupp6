@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Maxnoliam Pettholblad Portfolio</title>
+  <title>Maxnoliam Pettholblad Projekt</title>
   <meta name="description" content="Grundläggande information om vem Maxnoliam Pettholblad är och aspirerar att bli.">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/script.js" defer></script>
@@ -24,13 +24,14 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
 
 <header class="site-header">
   <!-- Gör namnet högst upp till en länk -->
-  <a class="site-header_logo" href="index.html">Maxnolian Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
+  <a class="site-header_logo" href="index.html">Maxnoliam Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
 
   <!-- Menyn högst upp som visar kategorier, se till att alla filer finns och att allt ser rätt ut -->
   <!-- Ska vara exakt samma på alla sidor -->
   <nav class="main-menu" aria-label="Huvudmeny">
     <button class="main-menu__toggle" type="button" data-js-action="toggle-menu" aria-expanded="false" aria-controls="main-menu-list">Meny</button>
     <ul class="main-menu__list" id="main-menu-list" data-js-target="menu">
+      <li class="main-menu__item"><a class="main-menu__link" href="index.html">Hem</a></li>
       <li class="main-menu__item"><a class="main-menu__link" href="kompetenser.html">Kompetenser</a></li>
       <li class="main-menu__item"><a class="main-menu__link" href="projekt.html">Projekt</a></li>
       <li class="main-menu__item"><a class="main-menu__link" href="utbildning.html">Utbildning och Erfarenhet</a></li>
@@ -45,17 +46,6 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
   <h1 class="page__title">Projekt</h1>
   <p class="page__intro">Ett urval av skolprojekt och egna projekt. Varje projekt har öppen källkod på GitHub</p>
 
-  <section class="filter" aria-labelledby="filter-rubrik">
-    <h2 class="filter__title" id="filter-rubrik">Filtrera Projekt</h2>
-    <ul class="filter__options">
-      <li class="filter__item"><button class="filter__option--active" type="button" data-js-action="filter-projects" data-category="alla" aria-pressed="alla">Alla projekt</button></li>
-      <li class="filter__item"><button class="filter__option--active" type="button" data-js-action="filter-projects" data-category="webbprojekt" aria-pressed="false">Webbprojekt</button></li>
-      <li class="filter__item"><button class="filter__option--active" type="button" data-js-action="filter-projects" data-category="sakerhet" aria-pressed="false">Säkerhetsprojekt</button></li>
-      <li class="filter__item"><button class="filter__option--active" type="button" data-js-action="filter-projects" data-category="data" aria-pressed="false">Dataprojekt</button></li>
-    </ul>
-    <p class="filter__status" data-js-target="filter-status" aria-live="polite">Visar alla 4 projekt</p>
-  </section>
-
   <!-- Första delen i projektlistan, bara att köra copy paste om man vill ha fler -->
   <section class="topic" aria-labelledby="lista-rubrik">
     <h2 class="topic__title" id="lista-rubrik">Projektlista</h2>
@@ -64,8 +54,8 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
         <h3 class="card__title" id="sakerhetsloggen-rubrik">Säkerhetsloggen</h3>
         <p class="card__facts">Examensprojekt 2026: Python, Elastisearch och Docker</p>
         <figure class="card__screenshot">
-          <img class="card__image" src="______________" alt="__________" width="" height="">
-          <figcaption class="card__screenshot-text">_______________</figcaption>
+          <img class="card__image" src="../images/säkerhetsloggen.jpg" alt="Säkerhetsloggens logga">
+          <figcaption class="card__screenshot-text">AI Genererad bild på Logotyp</figcaption>
         </figure>
         <p class="card__text">En lätt logganalys som samlar inloggningsförsök från flera servrar och larmar vid misstänkta mönster.</p>
         <ul class="card__tags" aria-label="Tekniker i Säkerhetsloggen">
@@ -73,12 +63,10 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
           <li class="card__tag">Elastisearch</li>
           <li class="card__tag">Docker</li>
         </ul>
-
-        <button class="card__toggle" type="button" data-js-action="toggle-details" aria-expanded="true" aria-controls="sakerhetsloggen-mer">Visa mer om Säkerhetsloggen</button>
         <div class="card__more" id="sakerhetsloggen-mer" data-js-target="project-details">
           <h4 class="card__subtitle">Så byggde jag det</h4>
-          <p class="card__text">Loggarna skickas via Filebeat till Elastisearch. Ett Python-skript körs varje minut, letar efter avvikelser och skickar larm till en chattkanal. Hela miljön startas med ett enda Docker Compose-kommando</p>
-          <p class="card__text"><a class="card__link" href="https://github.com">Källkoden till Säkerhetsloggen på GitHub</a></p>
+          <p class="card__text">Loggarna skickas via Filebeat till Elasticsearch. Ett Python-skript körs varje minut, letar efter avvikelser och skickar larm till en chattkanal. Hela miljön startas med ett enda Docker Compose-kommando.</p>
+          <p class="card__text"><a class="card__link" href="https://github.com/">Källkoden till Säkerhetsloggen på GitHub</a></p>
         </div>
       </article>
 
@@ -86,8 +74,8 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
         <h3 class="card__title" id="padelbokning-rubrik">Padelbokningen</h3>
         <p class="card__facts">Skolprojekt 2025: C#, ASP.NET Core, PostgreSQL</p>
         <figure class="card__screenshot">
-          <img class="card__image" src="______________" alt="__________" width="" height="">
-          <figcaption class="card__screenshot-text">____________</figcaption>
+          <img class="card__image" src="../images/padelhall.jpg" alt="Padelbokningens logga">
+          <figcaption class="card__screenshot-text">AI Genererad bild på Logotyp</figcaption>
         </figure>
         <p class="card__text">En bokningstjänst för en fiktiv padelhall där medlemmar kan boka banor, betala och avboka direkt i mobilen</p>
         <ul class="card__tags" aria-label="Tekniker i Padelbokningen">
@@ -96,7 +84,6 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
           <li class="card__tag">PostgreSQL</li>
         </ul>
 
-        <button class="card__toggle" type="button" data-js-action="toggle-details" aria-expanded="true" aria-controls="padelbokning-mer">Visa mer om Padelbokningen</button>
         <div class="card__more" id="padelbokning-mer" data-js-target="project-details">
           <h4 class="card__subtitle">Så byggde jag det</h4>
           <p class="card__text">Jag byggde ett REST-API med ASP.NET Core och Entity Framework. Inloggningen använder tvåstegsverifiering och alla formulär skyddas mot CSRF (förfalskade anrop). Gränssnittet klarar WCAG 2.1 AA.</p>
@@ -108,8 +95,8 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
         <h3 class="card__title" id="tillganglighetsskannern-rubrik">Tillgänglighetsskannern</h3>
         <p class="card__facts">Eget projekt 2026: JavaScript, Node.js</p>
         <figure class="card__screenshot">
-          <img class="card__image" src="______________" alt="__________" width="" height="">
-          <figcaption class="card__screenshot-text">_______________</figcaption>
+          <img class="card__image" src="../images/tillgänglighetsskanner.jpg" alt="Tillgänglighetsskannerns logga">
+          <figcaption class="card__screenshot-text">AI Genererad bild på Logotyp</figcaption>
         </figure>
         <p class="card__text">Ett kommandoradsverktyg som går igenom en webbplats och listar vanliga tillgänglighetsfel, som bilder utan alt-text och felaktig rubrikordning</p>
         <ul class="card__tags" aria-label="Tekniker i Säkerhetsloggen">
@@ -118,11 +105,11 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
           <li class="card__tag">WCAG</li>
         </ul>
 
-        <button class="card__toggle" type="button" data-js-action="toggle-details" aria-expanded="true" aria-controls="tillganglighetsskannern-mer">Visa mer om säkerhetsloggen</button>
+
         <div class="card__more" id="tillganglighetsskannern-mer" data-js-target="project-details">
           <h4 class="card__subtitle">Så byggde jag det</h4>
           <p class="card__text">Verktyget läser HTML-filer, bygger ett dokumentträd och kör ett tjugotal regler mot det. Resultatet skrivs ut i terminalen eller som JSON, så att det kan användas i en CI-pipeline.</p>
-          <p class="card__text"><a class="card__link" href="https://github.com">Källkoden till Säkerhetsloggen på GitHub</a></p>
+          <p class="card__text"><a class="card__link" href="https://github.com">Källkoden till Tillgänglighetsskannern på GitHub</a></p>
         </div>
       </article>
 
@@ -130,8 +117,8 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
         <h3 class="card__title" id="elpriskollen-rubrik">Elpriskollen</h3>
         <p class="card__facts">Skolprojekt 2024: Python, pandas, SQL</p>
         <figure class="card__screenshot">
-          <img class="card__image" src="______________" alt="__________" width="" height="">
-          <figcaption class="card__screenshot-text">_______________</figcaption>
+          <img class="card__image" src="../images/elpriskoll.jpg" alt="Elpriskollens logga">
+          <figcaption class="card__screenshot-text">AI Genererad bild på Logotyp</figcaption>
         </figure>
         <p class="card__text">En analys av svenska elpriser timme för timme som visar när det lönar sig att ladda elbilen eller köra tvättmaskinen.</p>
         <ul class="card__tags" aria-label="Tekniker i Säkerhetsloggen">
@@ -140,11 +127,11 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
           <li class="card__tag">SQL</li>
         </ul>
 
-        <button class="card__toggle" type="button" data-js-action="toggle-details" aria-expanded="true" aria-controls="elpriskollen-mer">Visa mer om säkerhetsloggen</button>
+
         <div class="card__more" id="elpriskollen-mer" data-js-target="project-details">
           <h4 class="card__subtitle">Så byggde jag det</h4>
           <p class="card__text">Prisdata hämtas varje natt från ett öppet API och sparas i en SQLite-databas. Med pandas räknar jag fram de billigaste timmarna och presenterar dem i en enkel webbrapport.</p>
-          <p class="card__text"><a class="card__link" href="https://github.com">Källkoden till Säkerhetsloggen på GitHub</a></p>
+          <p class="card__text"><a class="card__link" href="https://github.com">Källkoden till Elpriskollen på GitHub</a></p>
         </div>
       </article>
     </div>
@@ -155,10 +142,10 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
 
 <!-- Ska vara länkar här om jag orkar, annars får det leda till nåt -->
 <footer class="site-footer">
-  <p class="site-footer__text">&copy; Maxnoliam Pettholblad äger alla rättigheter i världen.</p>
+  <p class="site-footer__text">&copy; Maxnoliam Pettholblad. Fiktivt portfolio.</p>
   <ul class="site-footer__links">
-    <li class="site-footer__item"><a class="site-footer__link" href="../images/MaxSV.jpg" alt="Maxnoliam Pettholblad på en torsdag" width="400" height="400">Maxnoliam Pettholblad på en torsdag.</a></li>
-    <li class="site-footer__item"><a class="site-footer__link" href="../images/noel.png" alt="Maxnoliam Pettholblad på en tisdag." width="400" height="400">Maxnoliam Pettholblad på en tisdag.</a></li>
+    <li class="site-footer__item"><a class="site-footer__link" href="https://github.com/" alt="GitHub länk">Maxnoliam Pettholblad på GitHub</a></li>
+    <li class="site-footer__item"><a class="site-footer__link" href="https://www.linkedin.com/" alt="LinkedIn länk">Maxnoliam Pettholblad på LinkedIn</a></li>
   </ul>
 </footer>
 </body>

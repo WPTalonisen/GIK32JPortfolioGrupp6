@@ -92,12 +92,12 @@ $rollText = $roller[$roll] ?? $roll;
 <?php endif; ?>
   </main>
 
-  <footer class="colophon">
-    <p class="colophon__text">&copy; 2026 Maxnoliam Pettholblad. Fiktiv portfolio skapad i utbildningssyfte.</p>
-    <ul class="colophon__links">
-      <li class="colophon__item"><a class="colophon__link" href="https://github.com/exempel-alex-lindqvist">Alex Lindqvist på GitHub</a></li>
-      <li class="colophon__item"><a class="colophon__link" href="https://www.linkedin.com/in/exempel-alex-lindqvist">Alex Lindqvist på LinkedIn</a></li>
-    </ul>
+  <footer class="site-footer">
+      <p class="site-footer__text">&copy; Maxnoliam Pettholblad. Fiktivt portfolio.</p>
+      <ul class="site-footer__links">
+          <li class="site-footer__item"><a class="site-footer__link" href="https://github.com/" alt="GitHub länk">Maxnoliam Pettholblad på GitHub</a></li>
+          <li class="site-footer__item"><a class="site-footer__link" href="https://www.linkedin.com/" alt="LinkedIn länk">Maxnoliam Pettholblad på LinkedIn</a></li>
+      </ul>
   </footer>
 </body>
 </html>
