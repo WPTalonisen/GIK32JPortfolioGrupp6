@@ -16,14 +16,17 @@ Allt random uppfyller samma krav som det som behövs för slutprodukten, bara at
 Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
 -->
 
+<!--- Länk som hoppar över info och går rakt till det en anställare behöver veta -->
+<a class="skip-link" href="#main-content">Hoppa till huvudinnehållet</a>
 
 <header class="site-header">
   <!-- Gör namnet högst upp till en länk -->
-  <a class="site-header_logo" href="index.html">Maxnoliam Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
+  <a class="site-header__logo" href="index.html">Maxnoliam Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
 
   <!-- Menyn högst upp som visar kategorier, se till att alla filer finns och att allt ser rätt ut -->
   <!-- Ska vara exakt samma på alla sidor -->
   <nav class="main-menu" aria-label="Huvudmeny">
+    <!-- JS: Visar och döljer menylistan på smala skärmar. Vid klick växlar knappens aria-expanded mellan "false" och "true" och listan med data-js-target="menu" visas eller döljs. Escape-tangenten ska stänga menyn och flytta fokus tillbaka till knappen. -->
     <button class="main-menu__toggle" type="button" data-js-action="toggle-menu" aria-expanded="false" aria-controls="main-menu-list">Meny</button>
     <ul class="main-menu__list" id="main-menu-list" data-js-target="menu">
       <li class="main-menu__item"><a class="main-menu__link" href="index.html">Hem</a></li>
@@ -58,57 +61,57 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
       <tbody>
         <tr class="skill-matrix__row">
           <th class="skill-matrix__skill" scope="row">HTML5 och CSS3</th>
-          <th class="skill-matrix__value">Webb</th>
-          <th class="skill-matrix__value">3 av 5 - God</th>
-          <th class="skill-matrix__value">2 år</th>
+          <td class="skill-matrix__value">Webb</td>
+          <td class="skill-matrix__value">3 av 5 - God</td>
+          <td class="skill-matrix__value">2 år</td>
         </tr>
         <tr class="skill-matrix__row">
           <th class="skill-matrix__skill" scope="row">JavaScript</th>
-          <th class="skill-matrix__value">Webb</th>
-          <th class="skill-matrix__value">2 av 5 - Grundläggande</th>
-          <th class="skill-matrix__value">1 år</th>
+          <td class="skill-matrix__value">Webb</td>
+          <td class="skill-matrix__value">2 av 5 - Grundläggande</td>
+          <td class="skill-matrix__value">1 år</td>
         </tr>
         <tr class="skill-matrix__row">
           <th class="skill-matrix__skill" scope="row">C#</th>
-          <th class="skill-matrix__value">Backend</th>
-          <th class="skill-matrix__value">3 av 5 - God</th>
-          <th class="skill-matrix__value">2 år</th>
+          <td class="skill-matrix__value">Backend</td>
+          <td class="skill-matrix__value">3 av 5 - God</td>
+          <td class="skill-matrix__value">2 år</td>
         </tr>
         <tr class="skill-matrix__row">
           <th class="skill-matrix__skill" scope="row">Python</th>
-          <th class="skill-matrix__value">Backend</th>
-          <th class="skill-matrix__value">3 av 5 - God</th>
-          <th class="skill-matrix__value">2 år</th>
+          <td class="skill-matrix__value">Backend</td>
+          <td class="skill-matrix__value">3 av 5 - God</td>
+          <td class="skill-matrix__value">2 år</td>
         </tr>
         <tr class="skill-matrix__row">
           <th class="skill-matrix__skill" scope="row">SQL</th>
-          <th class="skill-matrix__value">Databaser</th>
-          <th class="skill-matrix__value">2 av 5 - Grundläggande</th>
-          <th class="skill-matrix__value">1 år</th>
+          <td class="skill-matrix__value">Databaser</td>
+          <td class="skill-matrix__value">2 av 5 - Grundläggande</td>
+          <td class="skill-matrix__value">1 år</td>
         </tr>
         <tr class="skill-matrix__row">
           <th class="skill-matrix__skill" scope="row">GitHub</th>
-          <th class="skill-matrix__value">Verktyg</th>
-          <th class="skill-matrix__value">3 av 5 - God</th>
-          <th class="skill-matrix__value">2 år</th>
+          <td class="skill-matrix__value">Verktyg</td>
+          <td class="skill-matrix__value">3 av 5 - God</td>
+          <td class="skill-matrix__value">2 år</td>
         </tr>
         <tr class="skill-matrix__row">
           <th class="skill-matrix__skill" scope="row">Linux</th>
-          <th class="skill-matrix__value">Drift</th>
-          <th class="skill-matrix__value">5 av 5 - Expert</th>
-          <th class="skill-matrix__value">4 år</th>
+          <td class="skill-matrix__value">Drift</td>
+          <td class="skill-matrix__value">5 av 5 - Expert</td>
+          <td class="skill-matrix__value">4 år</td>
         </tr>
         <tr class="skill-matrix__row">
           <th class="skill-matrix__skill" scope="row">OWASP Top 10</th>
-          <th class="skill-matrix__value">Säkerhet</th>
-          <th class="skill-matrix__value">5 av 5 - Expert</th>
-          <th class="skill-matrix__value">13 år</th>
+          <td class="skill-matrix__value">Säkerhet</td>
+          <td class="skill-matrix__value">5 av 5 - Expert</td>
+          <td class="skill-matrix__value">5 år</td>
         </tr>
         <tr class="skill-matrix__row">
           <th class="skill-matrix__skill" scope="row">BurpSuite och WireShark</th>
-          <th class="skill-matrix__value">Säkerhet</th>
-          <th class="skill-matrix__value">5 av 5 - Expert</th>
-          <th class="skill-matrix__value">13 år</th>
+          <td class="skill-matrix__value">Säkerhet</td>
+          <td class="skill-matrix__value">5 av 5 - Expert</td>
+          <td class="skill-matrix__value">5 år</td>
         </tr>
       </tbody>
     </table>
@@ -138,8 +141,8 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
 <footer class="site-footer">
   <p class="site-footer__text">&copy; Maxnoliam Pettholblad. Fiktivt portfolio.</p>
   <ul class="site-footer__links">
-    <li class="site-footer__item"><a class="site-footer__link" href="https://github.com/" alt="GitHub länk">Maxnoliam Pettholblad på GitHub</a></li>
-    <li class="site-footer__item"><a class="site-footer__link" href="https://www.linkedin.com/" alt="LinkedIn länk">Maxnoliam Pettholblad på LinkedIn</a></li>
+    <li class="site-footer__item"><a class="site-footer__link" href="https://github.com/">Maxnoliam Pettholblad på GitHub</a></li>
+    <li class="site-footer__item"><a class="site-footer__link" href="https://www.linkedin.com/">Maxnoliam Pettholblad på LinkedIn</a></li>
   </ul>
 </footer>
 </body>

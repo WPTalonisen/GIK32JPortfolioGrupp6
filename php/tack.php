@@ -49,16 +49,16 @@ $rollText = $roller[$roll] ?? $roll;
 <body>
   <a class="skip-link" href="#main-content">Hoppa till huvudinnehållet</a>
 
-  <header class="masthead">
-    <a class="masthead__logo" href="../html/index.html">Alex Lindqvist <span class="masthead__role">Systemutvecklare och IT-säkerhet</span></a>
+  <header class="site-header">
+    <a class="site-header__logo" href="../html/index.html">Maxnoliam Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
     <nav class="main-menu" aria-label="Huvudmeny">
       <!-- JS: Visar och döljer menylistan på smala skärmar. Vid klick växlar knappens aria-expanded mellan "false" och "true" och listan med data-js-target="menu" visas eller döljs. Escape-tangenten ska stänga menyn och flytta fokus tillbaka till knappen. -->
       <button class="main-menu__toggle" type="button" data-js-action="toggle-menu" aria-expanded="false" aria-controls="main-menu-list">Meny</button>
       <ul class="main-menu__list" id="main-menu-list" data-js-target="menu">
-        <li class="main-menu__item"><a class="main-menu__link" href="../html/index.html">Om mig</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="../html/index.html">Hem</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="../html/kompetenser.html">Kompetenser</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="../html/projekt.html">Projekt</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="../html/utbildning.html">Utbildning och erfarenhet</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="../html/utbildning.html">Utbildning och Erfarenhet</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="../html/certifieringar.html">Certifieringar</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="../html/kontakt.html">Kontakt</a></li>
       </ul>
@@ -85,7 +85,7 @@ $rollText = $roller[$roll] ?? $roll;
         <dd class="receipt__value"><?= nl2br($meddelande, false) ?></dd>
       </dl>
     </section>
-    <p class="page__intro"><a class="page__link" href="../html/index.html">Tillbaka till startsidan Om mig</a></p>
+    <p class="page__intro"><a class="page__link" href="../html/index.html">Tillbaka till startsidan</a></p>
 <?php else: ?>
     <p class="page__intro">Den här sidan visar ett kvitto efter att kontaktformuläret har skickats. Den laddades utan formulärdata.</p>
     <p class="page__intro"><a class="page__link" href="../html/kontakt.html">Gå till kontaktformuläret och skriv ett meddelande</a></p>
@@ -95,8 +95,8 @@ $rollText = $roller[$roll] ?? $roll;
   <footer class="site-footer">
       <p class="site-footer__text">&copy; Maxnoliam Pettholblad. Fiktivt portfolio.</p>
       <ul class="site-footer__links">
-          <li class="site-footer__item"><a class="site-footer__link" href="https://github.com/" alt="GitHub länk">Maxnoliam Pettholblad på GitHub</a></li>
-          <li class="site-footer__item"><a class="site-footer__link" href="https://www.linkedin.com/" alt="LinkedIn länk">Maxnoliam Pettholblad på LinkedIn</a></li>
+          <li class="site-footer__item"><a class="site-footer__link" href="https://github.com/">Maxnoliam Pettholblad på GitHub</a></li>
+          <li class="site-footer__item"><a class="site-footer__link" href="https://www.linkedin.com/">Maxnoliam Pettholblad på LinkedIn</a></li>
       </ul>
   </footer>
 </body>

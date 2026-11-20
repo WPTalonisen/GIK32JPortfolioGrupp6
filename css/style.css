@@ -55,6 +55,7 @@ textarea:focus-visible {
     left: 1rem;
     top: -4rem;
     background: var(--color-ink);
+    color: var(--color-paper);
     padding: 0.5rem 1rem;
     border-radius: var(--radius-pill);
 }
@@ -69,7 +70,7 @@ textarea:focus-visible {
 }
 
 /* Logotypen eller namnet längst upp som fungerar som hemlänk */
-.site-header_logo {
+.site-header__logo {
     font-size: 1.5rem;
     font-weight: 600;
     text-decoration: none;
@@ -201,6 +202,12 @@ textarea:focus-visible {
 .topic__point{
     margin-bottom: 0.5rem;
 
+}
+
+/* Underrubrik (<h3>) inuti en sektion */
+.topic__subtitle {
+    font-size: 1.125rem;
+    margin: 1.5rem 0 0.5rem;
 }
 
 /* Kort-komponent för att rama in projekt eller certifieringar */
@@ -479,7 +486,7 @@ textarea:focus-visible {
     border: 1px solid var(--color-line);
     border-radius: 0.75rem;
 }
-.contact-form__text-field:focus,.contact-form__dropdown:focus,.contact-form__message.focus{
+.contact-form__text-field:focus,.contact-form__dropdown:focus,.contact-form__message:focus{
     border-color: var(--color-ink);
 }
 .contact-form__text-field[aria-invalid="true"],.contact-form__message[aria-invalid="true"]{
@@ -526,7 +533,7 @@ textarea:focus-visible {
     accent-color: var(--color-ink);
 }
 
-.contact-form__field-label__inline{
+.contact-form__field-label--inline{
     font-weight: 400;
 }
 .contact-form__submit{
@@ -541,54 +548,6 @@ textarea:focus-visible {
 }
 .contact-form__submit:hover{
     background: var(--color-blueprint-hover);
-}
-/* Sektion för projektfiltrering */
-.filter {
-    margin-bottom: 2rem;
-}
-
-/* Rubrik för filtersektionen */
-.filter__title {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-}
-
-/* Listan med filterknappar */
-.filter__options {
-    display: flex;
-    flex-wrap: wrap;
-    gap:0.5rem;
-}
-
-/* Enskild listpunkt för en filterknapp */
-.filter__item {
-    list-style:none;
-}
-.filter__item button{
-    background: var(--color-panel);
-    border: 0;
-    border-radius: var(--radius-pill);
-    padding: 0.5rem 1.25rem;
-    font:inherit;
-    cursor: pointer;
-}
-
-.filter__item button:hover{
-    background: var(--color-line);
-}
-
-
-/* Den aktiva filterknappen */
-.filter__option--active {
-    background: var(--color-ink) !important;
-    color: var(--color-paper);
-}
-
-/* Statustext som visar hur många projekt som visas just nu */
-.filter__status {
-    margin-top: 0.75rem;
-    font-size: 0.875rem;
-    color:var(--color-muted);
 }
 
 /* Behållaren som håller alla projektkort */
@@ -636,28 +595,12 @@ textarea:focus-visible {
     font-size: 0.875rem;
 }
 
-/* "Visa mer"-knappen på projektkortet */
-.card__toggle {
-    background: var(--color-ink);
-    color:var(--color-paper);
-    border: 0;
-    border-radius: var(--radius-pill);
-    padding: 0.5rem 1.25rem;
-    cursor:pointer;
-}
-.card__toggle:hover{
-    background: var(--color-blueprint);
-}
-
 /* Den expanderbara rutan med extra information om projektet */
 .card__more {
     margin-top: 1rem;
     padding-top: 1rem;
     border-top:1px solid var(--color-line);
 
-}
-.card__more[hidden]{
-    display: none;
 }
 /* Underrubrik (<h4>) inuti projektets extra information */
 .card__subtitle {
@@ -697,4 +640,45 @@ textarea:focus-visible {
 /* Beskrivande text för en händelse i tidslinjen */
 .timeline__text {
     margin-top: 0.4rem;
+}
+/* Länk i sidans huvudinnehåll (t.ex. tillbaka-länken på tack-sidan) */
+.page__link {
+    color: var(--color-blueprint);
+}
+.page__link:hover {
+    color: var(--color-blueprint-hover);
+}
+
+/* Kvittot på tack-sidan som visar det som skickades */
+.receipt {
+    background: var(--color-panel);
+    border-left: 4px solid var(--color-blueprint);
+    border-radius: var(--radius-card);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 40rem;
+}
+
+/* Rubriken (<h2>) i kvittot */
+.receipt__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Definitionslistan (<dl>) med de skickade uppgifterna */
+.receipt__details {
+    display: grid;
+    gap: 0.25rem;
+}
+
+/* Fältets namn (<dt>), t.ex. "Namn" */
+.receipt__term {
+    font-weight: 600;
+    color: var(--color-muted);
+    margin-top: 0.75rem;
+}
+
+/* Det användaren skrev (<dd>) */
+.receipt__value {
+    overflow-wrap: anywhere;
 }

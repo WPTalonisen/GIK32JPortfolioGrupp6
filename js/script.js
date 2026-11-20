@@ -10,6 +10,15 @@ if (toggleMenu && menu){
         const isOpen= menu.classList.toggle('is-open');
         toggleMenu.setAttribute('aria-expanded',isOpen);
     });
+
+    // Escape stänger menyn och flyttar fokus tillbaka till knappen
+    document.addEventListener('keydown',function (event){
+        if (event.key === 'Escape' && menu.classList.contains('is-open')){
+            menu.classList.remove('is-open');
+            toggleMenu.setAttribute('aria-expanded','false');
+            toggleMenu.focus();
+        }
+    });
 }
 //end of menu
 
@@ -20,7 +29,7 @@ if(copyButton && copyStatus){
     copyButton.addEventListener('click',function (){
         const email = copyButton.getAttribute('data-email');
         navigator.clipboard.writeText(email).then(function (){
-            copyStatus.textContent = "kopierad!";
+            copyStatus.textContent = "E-postadressen är kopierad";
         });
     });
 }
@@ -35,36 +44,3 @@ if (countCharacters && characterCount){
     });
 }
 //end of kontakt
-
-//projekt
-const filterProjects= document.querySelector('[data-js-action="filter-projects"]')
-const filterStatus = document.querySelector('[data-js-target="filter-status"]')
-const projectList =document.querySelector('[data-js-target="project-list"]')
-const toggleDetails = document.querySelector('[data-js-action="toggle-details"]')
-const projectDetails = document.querySelector('[data-js-target="project-details"]')
-
-if(filterProjects && filterStatus){
-    filterProjects.addEventListener('input',function () {
-        const searchTerm = filterProjects.value;
-        filterStatus.textContent = "Visar resultat för: " + searchTerm;
-        if (projectList) {
-            const projectItems = projectList.querySelectorAll('.project-item');
-            projectItems.forEach(function (item) {
-                const text = item.textContent.toLowerCase();
-                if (text.includes(searchTerm.toLowerCase())) {
-                    item.style.display = "";
-                } else {
-                    item.style.display = "none";
-                }
-            });
-        }
-    });
-}
-if (toggleDetails && projectDetails){
-    toggleDetails.addEventListener('click',function (){
-        projectDetails.classList.toggle('is-open');
-
-    });
-}
-
-//end of projekt

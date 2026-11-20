@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
@@ -24,11 +24,12 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
 
 <header class="site-header">
     <!-- Gör namnet högst upp till en länk -->
-    <a class="site-header_logo" href="index.html">Maxnoliam Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
+    <a class="site-header__logo" href="index.html">Maxnoliam Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
 
     <!-- Menyn högst upp som visar kategorier, se till att alla filer finns och att allt ser rätt ut -->
     <!-- Ska vara exakt samma på alla sidor -->
     <nav class="main-menu" aria-label="Huvudmeny">
+        <!-- JS: Visar och döljer menylistan på smala skärmar. Vid klick växlar knappens aria-expanded mellan "false" och "true" och listan med data-js-target="menu" visas eller döljs. Escape-tangenten ska stänga menyn och flytta fokus tillbaka till knappen. -->
         <button class="main-menu__toggle" type="button" data-js-action="toggle-menu" aria-expanded="false" aria-controls="main-menu-list">Meny</button>
         <ul class="main-menu__list" id="main-menu-list" data-js-target="menu">
             <li class="main-menu__item"><a class="main-menu__link" href="index.html">Hem</a></li>
@@ -56,18 +57,10 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
         <article class="card card--featured" aria-labelledby="az900-rubrik">
             <h3 class="card__title" id="az900-rubrik">Microsoft Azure Fundamentals</h3>
             <p class="card__facts">Utfärdad <time datetime="2025-12">December 2025</time></p>
-            <p class="card__text">Molntjänster i Azure: grundbegre, säkerhet, prissättning och styrning.</p>
+            <p class="card__text">Molntjänster i Azure: grundbegrepp, säkerhet, prissättning och styrning.</p>
         </article>
     </section>
 
-    <section class="topic" aria-labelledby="pagaende-rubrik">
-        <h2 class="topic__title" id="pagaende-rubrik">Avklarade Certifieringar</h2>
-        <article class="card card--featured" aria-labelledby="ccna-rubrik">
-            <h3 class="card__title" id="ccna-rubrik">CompTIA Security+</h3>
-            <p class="card__facts">Utfärdad <time datetime="2025-11">November 2025</time></p>
-            <p class="card__text">Grundläggande certifiering i IT-säkerhet: Hot och sårbarheter, kryptering, identitetshantering och incidenthantering.</p>
-        </article>
-    </section>
 
     <section class="topic" aria-labelledby="kurser-rubrik">
         <h2 class="topic__title" id="kurser-rubrik">Kortare kurser</h2>
@@ -85,8 +78,8 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
 <footer class="site-footer">
     <p class="site-footer__text">&copy; Maxnoliam Pettholblad. Fiktivt portfolio.</p>
     <ul class="site-footer__links">
-        <li class="site-footer__item"><a class="site-footer__link" href="https://github.com/" alt="GitHub länk">Maxnoliam Pettholblad på GitHub</a></li>
-        <li class="site-footer__item"><a class="site-footer__link" href="https://www.linkedin.com/" alt="LinkedIn länk">Maxnoliam Pettholblad på LinkedIn</a></li>
+        <li class="site-footer__item"><a class="site-footer__link" href="https://github.com/">Maxnoliam Pettholblad på GitHub</a></li>
+        <li class="site-footer__item"><a class="site-footer__link" href="https://www.linkedin.com/">Maxnoliam Pettholblad på LinkedIn</a></li>
     </ul>
 </footer>
 </body>

@@ -10,28 +10,20 @@
 </head>
 <body>
 
-<!--
-En massa random skit kommer dyka upp här för jag har tråkigt, man måste ju underhålla sig på nåt sätt.
-Allt random uppfyller samma krav som det som behövs för slutprodukten, bara att byta ut allt till lite mer seriösare innehåll.
-Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
--->
-
-
-
-
 <!--- Länk som hoppar över info och går rakt till det en anställare behöver veta -->
 <a class="skip-link" href="#main-content">Hoppa till huvudinnehållet</a>
 
 <header class="site-header">
   <!-- Gör namnet högst upp till en länk -->
-  <a class="site-header_logo" href="index.html">Maxnoliam Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
+  <a class="site-header__logo" href="index.html">Maxnoliam Pettholblad <span class="site-header__role">Student inom IT-säkerhet och Mjukvarutestning</span></a>
 
   <!-- Menyn högst upp som visar kategorier, se till att alla filer finns och att allt ser rätt ut -->
   <!-- Ska vara exakt samma på alla sidor -->
   <nav class="main-menu" aria-label="Huvudmeny">
+    <!-- JS: Visar och döljer menylistan på smala skärmar. Vid klick växlar knappens aria-expanded mellan "false" och "true" och listan med data-js-target="menu" visas eller döljs. Escape-tangenten ska stänga menyn och flytta fokus tillbaka till knappen. -->
     <button class="main-menu__toggle" type="button" data-js-action="toggle-menu" aria-expanded="false" aria-controls="main-menu-list">Meny</button>
     <ul class="main-menu__list" id="main-menu-list" data-js-target="menu">
-      <li class="main-menu__item"><a class="main-menu__link" href="index.html">Meny</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="index.html">Hem</a></li>
       <li class="main-menu__item"><a class="main-menu__link" href="kompetenser.html">Kompetenser</a></li>
       <li class="main-menu__item"><a class="main-menu__link" href="projekt.html">Projekt</a></li>
       <li class="main-menu__item"><a class="main-menu__link" href="utbildning.html">Utbildning och Erfarenhet</a></li>
@@ -51,7 +43,7 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
     <ul class="contact-list">
       <li class="contact-list__item">
         <a class="contact-list__link" href="mailto:example@example.com">Mejla mig</a>
-        <!-- JS ska kopiera länken och sen ska "E-postadressen är kopierad" skrivas -->
+        <!-- JS: Vid klick kopieras adressen i data-email till urklipp och texten "E-postadressen är kopierad" skrivs i stycket med data-js-target="copy-status". Stycket har aria-live="polite" så att skärmläsare läser upp det. -->
         <button class="contact-list__copy" type="button" data-js-action="copy-email" data-email="example@example.com">Kopiera e-postadressen</button>
         <p class="contact-list__status" data-js-target="copy-status" aria-live="polite"></p>
       </li>
@@ -77,7 +69,7 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
 
       <div class="contact-form__field">
         <label class="contact-form__field-label" for="epost">E-postadress *</label>
-        <input class="contact-form__text-field" type="text" id="epost" name="epost" autocomplete="epost" required>
+        <input class="contact-form__text-field" type="email" id="epost" name="epost" autocomplete="email" required>
       </div>
 
       <div class="contact-form__field">
@@ -95,24 +87,25 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
         <legend class="contact-form__choices-title">Jag kontaktar dig som *</legend>
         <div class="contact-form__choice">
           <input class="contact-form__radio" type="radio" id="roll-rekryterare" name="roll" value="rekryterare" required>
-          <label class="contact-form__field-label contact-form__field-label__inline" for="roll-rekryterare">Rekryterare</label>
+          <label class="contact-form__field-label contact-form__field-label--inline" for="roll-rekryterare">Rekryterare</label>
         </div>
         <div class="contact-form__choice">
           <input class="contact-form__radio" type="radio" id="roll-utvecklare" name="roll" value="utvecklare" required>
-          <label class="contact-form__field-label contact-form__field-label__inline" for="roll-utvecklare">Utvecklare</label>
+          <label class="contact-form__field-label contact-form__field-label--inline" for="roll-utvecklare">Utvecklare</label>
         </div>
         <div class="contact-form__choice">
           <input class="contact-form__radio" type="radio" id="roll-student" name="roll" value="student" required>
-          <label class="contact-form__field-label contact-form__field-label__inline" for="roll-student">Student</label>
+          <label class="contact-form__field-label contact-form__field-label--inline" for="roll-student">Student</label>
         </div>
         <div class="contact-form__choice">
           <input class="contact-form__radio" type="radio" id="roll-annan" name="roll" value="annan" required>
-          <label class="contact-form__field-label contact-form__field-label__inline" for="roll-annan">Annan</label>
+          <label class="contact-form__field-label contact-form__field-label--inline" for="roll-annan">Annan</label>
         </div>
       </fieldset>
 
       <div class="contact-form__field">
         <label class="contact-form__field-label" for="meddelande">Meddelande *</label>
+        <!-- JS: Räknar tecknen i meddelandet medan användaren skriver. Vid varje inmatning skrivs "X av 1000 tecken använda" i stycket med data-js-target="character-count". Maxlängden läses från data-max-length. Stycket har aria-live="polite" så att skärmläsare läser upp det. -->
         <textarea class="contact-form__message" id="meddelande" name="meddelande" rows="7" maxlength="1000" required
                   aria-describedby="meddelande-antal" data-js-action="count-characters" data-max-length="1000"></textarea>
         <p class="contact-form__counter" id="meddelande-antal" data-js-target="character-count" aria-live="polite">Högst 1000 tecken.</p>
@@ -126,10 +119,10 @@ Får be till gud bara att jag inte glömmer att fixa till nåt innan inlämning.
 
 <!-- Ska vara länkar här om jag orkar, annars får det leda till nåt -->
 <footer class="site-footer">
-  <p class="site-footer__text">&copy; Maxnoliam Pettholblad äger alla rättigheter i världen.</p>
+  <p class="site-footer__text">&copy; Maxnoliam Pettholblad Fiktivt portfolio.</p>
   <ul class="site-footer__links">
-    <li class="site-footer__item"><a class="site-footer__link" href="https://github.com/" alt="GitHub länk">Maxnoliam Pettholblad på GitHub</a></li>
-    <li class="site-footer__item"><a class="site-footer__link" href="https://www.linkedin.com/" alt="LinkedIn länk">Maxnoliam Pettholblad på LinkedIn</a></li>
+    <li class="site-footer__item"><a class="site-footer__link" href="https://github.com/">Maxnoliam Pettholblad på GitHub</a></li>
+    <li class="site-footer__item"><a class="site-footer__link" href="https://www.linkedin.com/">Maxnoliam Pettholblad på LinkedIn</a></li>
   </ul>
 </footer>
 </body>
