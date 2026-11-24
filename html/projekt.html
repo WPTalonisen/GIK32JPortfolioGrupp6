@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Maxnoliam Pettholblad Projekt</title>
-  <meta name="description" content="Grundläggande information om vem Maxnoliam Pettholblad är och aspirerar att bli.">
+  <meta name="description" content="Maxnoliams tidigare projekt, Säkerhetslogg, Padelbokning, Elpriskoll och Tillgänglighetsskanner">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/script.js" defer></script>
 </head>
@@ -20,8 +20,7 @@
   <!-- Menyn högst upp som visar kategorier, se till att alla filer finns och att allt ser rätt ut -->
   <!-- Ska vara exakt samma på alla sidor -->
   <nav class="main-menu" aria-label="Huvudmeny">
-    <!-- JS: Visar och döljer menylistan på smala skärmar. Vid klick växlar knappens aria-expanded mellan "false" och "true" och listan med data-js-target="menu" visas eller döljs. Escape-tangenten ska stänga menyn och flytta fokus tillbaka till knappen. -->
-    <button class="main-menu__toggle" type="button" data-js-action="toggle-menu" aria-expanded="false" aria-controls="main-menu-list">Meny</button>
+    <!-- JS: Visar och döljer menylistan på smala skärmar. -->    <button class="main-menu__toggle" type="button" data-js-action="toggle-menu" aria-expanded="false" aria-controls="main-menu-list">Meny</button>
     <ul class="main-menu__list" id="main-menu-list" data-js-target="menu">
       <li class="main-menu__item"><a class="main-menu__link" href="index.html">Hem</a></li>
       <li class="main-menu__item"><a class="main-menu__link" href="kompetenser.html">Kompetenser</a></li>
@@ -41,12 +40,12 @@
   <!-- Första delen i projektlistan, bara att köra copy paste om man vill ha fler -->
   <section class="topic" aria-labelledby="lista-rubrik">
     <h2 class="topic__title" id="lista-rubrik">Projektlista</h2>
-    <div class="projekt-list">
+    <div class="project-list">
       <article class="card card--featured" aria-labelledby="sakerhetsloggen-rubrik">
         <h3 class="card__title" id="sakerhetsloggen-rubrik">Säkerhetsloggen</h3>
         <p class="card__facts">Examensprojekt 2026: Python, Elastisearch och Docker</p>
         <figure class="card__screenshot">
-          <img class="card__image" src="../images/säkerhetsloggen.jpg" alt="Säkerhetsloggens logga">
+          <img class="card__image" src="../images/sakerhetsloggen.jpg" alt="Säkerhetsloggens logga">
           <figcaption class="card__screenshot-text">AI Genererad bild på Logotyp</figcaption>
         </figure>
         <p class="card__text">En lätt logganalys som samlar inloggningsförsök från flera servrar och larmar vid misstänkta mönster.</p>
@@ -87,7 +86,7 @@
         <h3 class="card__title" id="tillganglighetsskannern-rubrik">Tillgänglighetsskannern</h3>
         <p class="card__facts">Eget projekt 2026: JavaScript, Node.js</p>
         <figure class="card__screenshot">
-          <img class="card__image" src="../images/tillgänglighetsskanner.jpg" alt="Tillgänglighetsskannerns logga">
+          <img class="card__image" src="../images/tillganglighetsskanner.jpg" alt="Tillgänglighetsskannerns logga">
           <figcaption class="card__screenshot-text">AI Genererad bild på Logotyp</figcaption>
         </figure>
         <p class="card__text">Ett kommandoradsverktyg som går igenom en webbplats och listar vanliga tillgänglighetsfel, som bilder utan alt-text och felaktig rubrikordning</p>

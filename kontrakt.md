@@ -18,7 +18,7 @@
 |  skill-matrix| __title, __row, __heading, __skill, __value|  |  kompetenser|  En tabell med kompetenser och nivåer|
 |  contact-list| __item, __link, __copy, __status|  |  kontakt|  En lista med kontaktvägar|
 |  contact-form| __hint, __field, __field-label, __text-field, __dropdown, __choices, __choices-title, __choice, __radio, __message, __counter, __submit| __field-label--inline |  kontakt|  kontaktformuläret|
-|  projekt-list| |  |  projekt|  behållaren för projektkort|
+|  project-list| |  |  projekt|  behållaren för projektkort|
 |  receipt| __title, __details, __term, __value|  |  tack|  Kvittot som visar det som skickades i formuläret|
 |  timeline| __item, __title, __period, __text|  |  utbildning|  Händelser i tidsordning|
 |  site-footer| __text, __links, __item, __link|  |  alla sidor|  Sidfoten som är gemensam för hela webbsidan|

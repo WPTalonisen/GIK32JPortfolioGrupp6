@@ -552,12 +552,12 @@ textarea:focus-visible {
 
 /* Behållaren som håller alla projektkort */
 /* CSS Grid för era projektkort (används i projekt.html) */
-.projekt-list {
+.project-list {
     display: grid;
     gap: 1.5rem;
 }
 @media (min-width: 768px) {
-    .projekt-list {
+    .project-list {
         grid-template-columns: repeat(2, 1fr);
     }
 }
